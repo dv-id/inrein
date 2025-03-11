@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <title>8)</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Ultra&family=VT323&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <nav class="navbar fixed-top container">
+        <a class="navbar-nav m-auto" href="./index.html">theory</a>
+        <a class="navbar-nav m-auto" href="./template.html">template</a>
+    </nav>
+
+    <div class="container" style="margin-top: 70px">
+
+        <div class="row row-cols-1 vh-100 g-5 p-5">
+            <div class="col">
+                <h2 class="text-center">transpose the vision to a structured sheet</h2>
+                <div class="typedjsdiv text-center">
+                    <h3>
+                        <span id="typedjs" class="text-center"></span>
+                    </h3>
+                </div>
+            </div>
+
+            <h5 class="mb-2 mt-0" style="font-style: italic; font-weight: 200;"></h5>
+
+            <div class="col mt-0">
+                <label for="customersegments" class="form-label mb-0 mt-5">Customer Segments</label>
+                <div class="form-text">
+                    <p><em>For whom are we creating value?</em></p>
+                    <p><em>Who are our most important customers?</em></p>
+                </div>
+                <textarea id="customersegments" class="form-control" style="color: rgb(72, 0, 255);"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                <div class="form-text">
+                    
+                </div>
+            </div>
+
+            <div class="col mt-0">
+                <label for="valuepropositions" class="form-label mb-0 mt-5">Value Propositions</label>
+                <div class="form-text">
+                    <p><em>What value do we deliver to the customer?</em></p>
+                    <p><em>Which one of our cutomer's problems are we helping to solve?</em></p>
+                    <p><em>What bundles of products and services are we offering to each Customer Segment?</em></p>
+                    <p><em>Which customer needs are we satisfying?</em></p>
+                </div>
+                <textarea id="valuepropositions" class="form-control" style="color: rgb(72, 0, 255);"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                <div class="form-text">
+                    
+                </div>
+            </div>
+
+            <div class="col mt-0">
+                <label for="channels" class="form-label mt-5 mb-0">Channels</label>
+                <div class="form-text">
+                    <p><em>Through which Channels do our Customer Segments want to be reached?</em></p>
+                    <p><em>How are we reaching them now?</em></p>
+                    <p><em>How are our Channels integrated?</em></p>
+                    <p><em>Which ones work best?</em></p>
+                    <p><em>Which ones are most cost-efficient?</em></p>
+                    <p><em>How are we integrating them with customer routines?</em></p>
+
+                    <h5 class="mt-3"><strong>channel phases</strong></h5>
+                    <ul>
+                        <li><strong>Awareness:</strong><em> How do we raise awareness about our company's products and
+                                services?</em></li>
+                        <li><strong>Evaluation:</strong><em> How do we help customers evaluate our organization's Value
+                                Proposition?</em></li>
+                        <li><strong>Purchase:</strong><em> How do we allow customers to purchase specific products and
+                                services?</em></li>
+                        <li><strong>Delivery:</strong><em> How do we deliver a Value Proposition to customers?</em></li>
+                        <li><strong>After sales:</strong><em> How do we provide post-purchase customer support?</em>
+                        </li>
+                    </ul>
+                </div>
+                <textarea id="channels" class="form-control" style="color: rgb(72, 0, 255);"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                <div class="form-text">
+                    
+
+
+                </div>
+            </div>
+
+            <div class="col mt-0">
+                <label for="customerrelationships" class="form-label mt-5 mb-0">Customer Relationships</label>
+                <div class="form-text">
+                    <p><em>What type of relationship does each of our Customer Segments expect us to establish and
+                            maintain with them?</em></p>
+                    <p><em>Which ones have we established?</em></p>
+                    <p><em>How are they integrated with the rest of our business model?</em></p>
+                    <p><em>How costly are they?</em></p>
+
+                    <h5 class="mt-3"><strong>examples</strong></h5>
+                    <ul>
+                        <li><em>personal assistance</em></li>
+                        <li><em>dedicated personal assistance</em></li>
+                        <li><em>self-service</em></li>
+                        <li><em>automated services</em></li>
+                        <li><em>communities</em></li>
+                        <li><em>co-creation</em></li>
+                    </ul>
+                </div>
+                <textarea id="customerrelationships" class="form-control" style="color: rgb(72, 0, 255);"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                <div class="form-text">
+                    
+                </div>
+            </div>
+
+            <div class="col mt-0">
+                <label for="revenuestreams" class="form-label mt-5 mb-0">Revenue Streams</label>
+                <div class="form-text">
+                    <p><em>For what value are our customers really willing to pay?</em></p>
+                    <p><em>For what do they currently pay?</em></p>
+                    <p><em>How are they currently paying?</em></p>
+                    <p><em>How would they prefer to pay?</em></p>
+                    <p><em>How much does each Revenue Stream contribute to overall revenues?</em></p>
+
+                    <h5 class="mt-3"><strong>types</strong></h5>
+                    <ul>
+                        <li><em>Asset sale</em></li>
+                        <li><em>Usage fee</em></li>
+                        <li><em>Subscription fees</em></li>
+                        <li><em>Lending / Renting / Leasing</em></li>
+                        <li><em>Licensing</em></li>
+                        <li><em>Brokerage fees</em></li>
+                        <li><em>Advertising</em></li>
+                    </ul>
+                </div>
+                <textarea id="revenuestreams" class="form-control" style="color: rgb(72, 0, 255);"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                <div class="form-text">
+                    
+                </div>
+            </div>
+
+            <div class="col mt-0">
+                <label for="keyresources" class="form-label mt-5 mb-0">Key Resources</label>
+                <div class="form-text">
+                    <p><em>What Key Resources do our Value Propositions require?</em></p>
+                    <p><em>Our Distribution Channels?</em></p>
+                    <p><em>Customer Relationships?</em></p>
+                    <p><em>Revenue Streams?</em></p>
+
+                    <h5 class="mt-3"><strong>types of resources</strong></h5>
+                    <ul>
+                        <li><em>Physical</em></li>
+                        <li><em>Intellectual (brand patents, copyrights, data)</em></li>
+                        <li><em>Human</em></li>
+                        <li><em>Financial</em></li>
+                    </ul>
+
+                </div>
+                <textarea id="keyresources" class="form-control" style="color: rgb(72, 0, 255);"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                <div class="form-text">
+                    tips
+                </div>
+            </div>
+
+            <div class="col mt-0">
+                <label for="keyactivities" class="form-label mt-5 mb-0">Key Activities</label>
+                <div class="form-text">
+                    <p><em>What Key Activities do our Value Propositions require?</em></p>
+                    <p><em>Our Distribution Channels?</em></p>
+                    <p><em>Customer Relationships?</em></p>
+                    <p><em>Revenue Streams?</em></p>
+
+                    <h5 class="mt-3"><strong>categories</strong></h5>
+                    <ul>
+                        <li><em>Production</em></li>
+                        <li><em>Problem Solving</em></li>
+                        <li><em>Platform / Network</em></li>
+                    </ul>
+
+                </div>
+                <textarea id="keyactivities" class="form-control" style="color: rgb(72, 0, 255);"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                <div class="form-text">
+                    
+                </div>
+            </div>
+
+            <div class="col mt-0">
+                <label for="keypartnerships" class="form-label mt-5 mb-0">Key Partnerships</label>
+                <div class="form-text">
+                    <p><em>Who are our Key Partners?</em></p>
+                    <p><em>Who are our key suppliers?</em></p>
+                    <p><em>Which Key Resources are we acquiring from partners?</em></p>
+                    <p><em>Which Key Activities do partners perform?</em></p>
+
+                    <h5 class="mt-3"><strong>motivations for partnerships</strong></h5>
+                    <ul>
+                        <li><em>Optimization and economy</em></li>
+                        <li><em>Reduction of risk and uncertainty</em></li>
+                        <li><em>Acquisition of particular resources and activities</em></li>
+                    </ul>
+                </div>
+                <textarea id="keypartners" class="form-control" style="color: rgb(72, 0, 255);"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                <div class="form-text">
+                    
+                </div>
+            </div>
+
+            <div class="col mt-0">
+                <label for="coststructure" class="form-label mt-5 mb-0">Cost Structure</label>
+                <div class="form-text">
+                    <p><em>What are the most important costs inherent in our business model?</em></p>
+                    <p><em>Which Key Resources are most expensive?</em></p>
+                    <p><em>Which Key Activities are most expensive?</em></p>
+
+                    <h5 class="mt-3"><strong>is your business more:</strong></h5>
+                    <ul>
+                        <li><em>Cost Driven (leanest cost structure, low price value proposition, maximum automation,
+                                extensive outsourcing)</em></li>
+                        <li><em>Value Driven (focused on value creation, premium value proposition)</em></li>
+                    </ul>
+
+                    <h5 class="mt-3"><strong>sample characteristics:</strong></h5>
+                    <ul>
+                        <li><em>Fixed Costs (salaries, rents, utilities)</em></li>
+                        <li><em>Variable Costs</em></li>
+                        <li><em>Economies of scale</em></li>
+                        <li><em>Economies of scope</em></li>
+                    </ul>
+                </div>
+                <textarea id="coststructure" class="form-control" style="color: rgb(72, 0, 255);"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                <div class="form-text">
+                    
+                </div>
+            </div>
+
+
+
+            <div class="row row-cols text-center mt-5">
+                <div class="col-12">
+                    <p><em>click the button below to render the document</em></p>
+                </div>
+                <div class="col-12">
+                    <button id="renderresults" class="btn p-3 w-75">
+                        <h3 class="m-0">render & download the sheet</h3>
+                    </button>
+                </div>
+            </div>
+
+            <div class="col-12 p-3"></div>
+
+
+
+        </div>
+    </div>
+    <script src="script.js" defer></script>
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script>
+        var typed = new Typed('#typedjs', {
+            strings: ["clarify your thoughts", "give your vision a structure", "share your ideas with others"],
+            typeSpeed: 25,
+            backSpeed: 40
+        });
+    </script>
+</body>
+
+</html>

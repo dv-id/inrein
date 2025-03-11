@@ -1,0 +1,140 @@
+
+
+html, body {
+    width: 100%;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    overscroll-behavior: none; 
+    margin: 0;
+    --dot-bg: rgb(255, 255, 255);
+    --dot-color: rgb(153, 153, 153);
+    --dot-size: 1px;
+    --dot-space: 4px;
+      background:
+          linear-gradient(90deg, var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          linear-gradient(var(--dot-bg) calc(var(--dot-space) - var(--dot-size)), transparent 1%) center / var(--dot-space) var(--dot-space),
+          var(--dot-color);
+    color:rgb(72, 0, 255);
+    font-size: 1em;
+    text-align: start;
+
+}
+
+
+#mainheading {
+    text-shadow: 4px 4px 7px rgb(188, 164, 249);
+    font-weight: bold;
+    font-size: 66px;
+}
+
+nav > a {
+    background-color: inherit;
+    text-decoration: none;
+    font-size: 2em;
+    color:rgb(72, 0, 255);
+    font-weight: bolder;
+}
+
+.btn, .form-control {
+    background-color: white;
+    color: rgb(72, 0, 255);
+    border: solid 2px;
+    border-color: rgb(72, 0, 255);
+    box-shadow: 
+    5px 5px 4px rgb(72, 0, 255);
+    font-weight: 700;
+
+} 
+.btn:hover {
+    border-color: rgb(72, 0, 255);
+    background-color: rgb(72, 0, 255);
+    color: white;
+}
+
+p {
+ margin-bottom: 3px;
+}
+
+h1 {
+    margin-bottom: 8px;
+}
+
+h3 {
+    margin-bottom: 0px;
+    margin-top: 24px;
+}
+
+h4  {
+    margin-top: 24px;
+}
+
+h3, h4, h2 {
+    text-shadow: 1px 1px 6px rgb(188, 164, 249);
+}
+
+li {
+    margin-bottom: 6px;
+}
+
+.form-label, .form-text {
+    text-shadow: 1px 1px 6px rgb(188, 164, 249);
+    color: rgb(72, 0, 255);
+}
+
+.form-text {
+    font-size: 18px;
+}
+
+.form-label {
+    font-size: 30px;
+}
+
+textarea{
+    height: auto;
+    color: rgb(72, 0, 255);
+}
+
+.form-control:active, .form-control:focus {
+    outline-color: red;
+}
+
+.typedjsdiv {
+    height: 100px;
+}
+
+.modal {
+    --bs-modal-width: 66%;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+  }
+  th {
+    background-color: #f2f2f2;
+  }
+  .rotate {
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    white-space: nowrap;
+  }
+  .rotate-header {
+    width: 20px; /* Adjust width as needed */
+  }
+  .center {
+    text-align: center;
+  }
+
+/* ol {
+    counter-reset: item;
+}
+
+li:before {
+    content: counters(item, ".") " ";
+    counter-increment: item
+} */
