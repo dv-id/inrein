@@ -1,44 +1,72 @@
+import { initializeApp } from "https://www.gstatic.com/firebasejs/11.4.0/firebase-app.js";
+import {
+  getFirestore,
+  collection,
+  addDoc,
+  doc,
+  setDoc,
+} from "https://www.gstatic.com/firebasejs/11.4.0/firebase-firestore.js";
 
-document.addEventListener('DOMContentLoaded', function () {
-    let renderresultsBtn = document.getElementById("renderresults");
+document.addEventListener("DOMContentLoaded", function () {
+  let renderresultsBtn = document.getElementById("renderresults");
 
-    let customerssegmentsEl = document.getElementById('customersegments');
-    let valuepropositionsEl = document.getElementById('valuepropositions');
-    let channelsEl = document.getElementById('channels');
-    let customerrelationshipsEl = document.getElementById('customerrelationships');
-    let revenuestreamsEl = document.getElementById('revenuestreams');
-    let keyresourcesEl = document.getElementById('keyresources');
-    let keyactivitiesEl = document.getElementById('keyactivities');
-    let keypartnersEl = document.getElementById('keypartners');
-    let coststructureEl = document.getElementById('coststructure');
+  let customerssegmentsEl = document.getElementById("customersegments");
+  let valuepropositionsEl = document.getElementById("valuepropositions");
+  let channelsEl = document.getElementById("channels");
+  let customerrelationshipsEl = document.getElementById(
+    "customerrelationships"
+  );
+  let revenuestreamsEl = document.getElementById("revenuestreams");
+  let keyresourcesEl = document.getElementById("keyresources");
+  let keyactivitiesEl = document.getElementById("keyactivities");
+  let keypartnersEl = document.getElementById("keypartners");
+  let coststructureEl = document.getElementById("coststructure");
 
-    let listofelements = [customerssegmentsEl, valuepropositionsEl, channelsEl, customerrelationshipsEl, revenuestreamsEl, keyresourcesEl, keyactivitiesEl, keypartnersEl, coststructureEl];
-    let listoftitles = ['Customer Segments', 'Value Propositions', 'Channels', 'Customer Relationships', 'Revenue Streams', 'Key Resources', 'Key Activities', 'Key Partners', 'Cost Structure'];
+  let listofelements = [
+    customerssegmentsEl,
+    valuepropositionsEl,
+    channelsEl,
+    customerrelationshipsEl,
+    revenuestreamsEl,
+    keyresourcesEl,
+    keyactivitiesEl,
+    keypartnersEl,
+    coststructureEl,
+  ];
+  let listoftitles = [
+    "Customer Segments",
+    "Value Propositions",
+    "Channels",
+    "Customer Relationships",
+    "Revenue Streams",
+    "Key Resources",
+    "Key Activities",
+    "Key Partners",
+    "Cost Structure",
+  ];
 
-    let results = [];
+  let results = [];
 
-    function escapeHtml(unsafe) {
-        return unsafe
-            .replace(/</g, "&lt;")
-            .replace(/>/g, "&gt;")
-            .replace(/'/g, "&#096;");
+  function escapeHtml(unsafe) {
+    return unsafe
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/'/g, "&#096;");
+  }
+
+  let renderresults = function () {
+    let outputs = [];
+
+    for (let i = 0; i < listofelements.length; i++) {
+      let heading = `<h2 style="font-weight: bold; font-size: 2em; margin-left: 10%">${listoftitles[i]}</h2>`;
+      let paragraph = `<p style="font-style: italic; font-size: 1em; margin-left: 10%;">${escapeHtml(
+        listofelements[i].value
+      )}</p>`;
+      outputs += heading + paragraph;
     }
+    results.push(outputs);
 
-    let renderresults = function () {
-
-
-        let outputs = [];
-        
-        for (i = 0; i < listofelements.length; i++) {
-            
-            let heading = `<h2 style="font-weight: bold; font-size: 2em; margin-left: 10%">${listoftitles[i]}</h2>`;
-            let paragraph = `<p style="font-style: italic; font-size: 1em; margin-left: 10%;">${escapeHtml(listofelements[i].value)}</p>`;
-            outputs += heading + paragraph;
-            
-        }
-        results.push(outputs);
-        
-        let htmlContent = `
+    let htmlContent = `
         <!DOCTYPE html>
         <html lang="en">
         <head>
@@ -55,19 +83,45 @@ document.addEventListener('DOMContentLoaded', function () {
         </html>
         `;
 
-        let blob = new Blob([htmlContent], { type: 'text/html' });
-        let link = document.createElement('a');
-        link.href = URL.createObjectURL(blob);
-        link.download = 'canvas.html';
-        link.click();
+    let blob = new Blob([htmlContent], { type: "text/html" });
+    let link = document.createElement("a");
+    link.href = URL.createObjectURL(blob);
+    link.download = "canvas.html";
+    link.click();
 
+    const firebaseConfig = {
+      apiKey: "AIzaSyDxb43QuBhqdQK_NMY-LA1YbNCcMQfEvK8",
+      authDomain: "inreins-ea1da.firebaseapp.com",
+      projectId: "inreins-ea1da",
+      storageBucket: "inreins-ea1da.firebasestorage.app",
+      messagingSenderId: "878801441393",
+      appId: "1:878801441393:web:e8a97746d47355348441d0",
+      measurementId: "G-MKWME5H8QL",
     };
 
-    renderresultsBtn.addEventListener('click', renderresults);
+    const app = initializeApp(firebaseConfig);
+    const firestore = getFirestore();
+    
+    const docData = {
+      customerssegments: customerssegmentsEl.value,
+      valuepropositions: valuepropositionsEl.value,
+      channels: channelsEl.value,
+      customerrelationships: customerrelationshipsEl.value,
+      revenuestreams: revenuestreamsEl.value,
+      keyresources: keyresourcesEl.value,
+      keyactivities: keyactivitiesEl.value,
+      keypartners: keypartnersEl.value,
+      coststructure: coststructureEl.value,
+    };
+
+    try {
+      addDoc(collection(firestore, "ideas"), docData);
+      console.log("Document successfully written!");
+    } catch (e) {
+      console.error("Error adding document: ", e);
+    }
+    
+  };
+
+  renderresultsBtn.addEventListener("click", renderresults);
 });
-
-
-
-
-
-
