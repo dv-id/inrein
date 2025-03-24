@@ -20,6 +20,8 @@
         href="https://fonts.googleapis.com/css2?family=Alegreya:ital,wght@0,400..900;1,400..900&family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Ubuntu+Mono:ital,wght@0,400;0,700;1,400;1,700&family=Ubuntu:ital,wght@0,300;0,400;0,500;0,700;1,300;1,400;1,500;1,700&family=Ultra&family=VT323&display=swap"
         rel="stylesheet">
     </head>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
 
 <body>
 
@@ -41,6 +43,18 @@
             </div>
 
             <h5 class="mb-2 mt-0" style="font-style: italic; font-weight: 200;"></h5>
+
+            <div class="col mt-0">
+                <label for="customersegments" class="form-label mb-0 mt-5">Company name</label>
+                <div class="form-text">
+            
+                </div>
+                <textarea id="customersegments" class="form-control" style="color: rgb(72, 0, 255);"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                <div class="form-text">
+                    
+                </div>
+            </div>
 
             <div class="col mt-0">
                 <label for="customersegments" class="form-label mb-0 mt-5">Customer Segments</label>
@@ -252,6 +266,28 @@
                     
                 </div>
             </div>
+
+
+            <div class="col mt-0">
+                <label for="customersegments" class="form-label mb-0 mt-5">Additional information</label>
+                <div class="form-text">
+                    
+                </div>
+                <textarea id="customersegments" class="form-control" style="color: rgb(72, 0, 255);"
+                    oninput='this.style.height = "";this.style.height = this.scrollHeight + "px"'></textarea>
+                <div class="form-text">
+                    
+                </div>
+            </div>
+
+            <div class="col mt-2 d-flex justify-content-center align-items-center">
+                <form id="captcha-form" action="?" method="POST">
+                    <div class="g-recaptcha" data-sitekey="6Lds__0qAAAAAGCiapcLn4hnbVMQaas1JdNNUcOZ"></div>
+                    <br/>
+                    <input type="submit" value="Submit">
+                  </form>
+            </div>
+
 
 
 

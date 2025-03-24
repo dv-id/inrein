@@ -54,7 +54,13 @@ document.addEventListener("DOMContentLoaded", function () {
       .replace(/'/g, "&#096;");
   }
 
-  let renderresults = function () {
+  let renderresults = async function () {
+    let captchaResponse = grecaptcha.getResponse();
+    if (!captchaResponse) {
+      alert("Please complete the CAPTCHA");
+      return;
+    }
+    
     let outputs = [];
 
     for (let i = 0; i < listofelements.length; i++) {
@@ -115,7 +121,7 @@ document.addEventListener("DOMContentLoaded", function () {
     };
 
     try {
-      addDoc(collection(firestore, "ideas"), docData);
+      await addDoc(collection(firestore, "ideas"), docData);
       console.log("Document successfully written!");
     } catch (e) {
       console.error("Error adding document: ", e);
