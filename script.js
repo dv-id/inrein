@@ -10,6 +10,7 @@ import {
 document.addEventListener("DOMContentLoaded", function () {
   let renderresultsBtn = document.getElementById("renderresults");
 
+  let companynameEl = document.getElementById("companyname");
   let customerssegmentsEl = document.getElementById("customersegments");
   let valuepropositionsEl = document.getElementById("valuepropositions");
   let channelsEl = document.getElementById("channels");
@@ -23,6 +24,7 @@ document.addEventListener("DOMContentLoaded", function () {
   let coststructureEl = document.getElementById("coststructure");
 
   let listofelements = [
+    companynameEl,
     customerssegmentsEl,
     valuepropositionsEl,
     channelsEl,
@@ -34,6 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     coststructureEl,
   ];
   let listoftitles = [
+    "Company Name",
     "Customer Segments",
     "Value Propositions",
     "Channels",

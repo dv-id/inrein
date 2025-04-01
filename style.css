@@ -76,6 +76,13 @@ li {
     margin-bottom: 6px;
 }
 
+a {
+    text-decoration: none;
+    color: rgb(72, 0, 255);
+    font-weight: bolder;
+    font-style: italic;
+}
+
 .form-label, .form-text {
     text-shadow: 1px 1px 6px rgb(188, 164, 249);
     color: rgb(72, 0, 255);
